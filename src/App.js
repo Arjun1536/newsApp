@@ -1,7 +1,7 @@
 
 import './App.css';
 
-import  { Component } from 'react'
+import  { useState} from 'react'
 import NavBar from './components/NavBar';
 import News from './components/News';
 import React from 'react';
@@ -12,15 +12,14 @@ import LoadingBar from 'react-top-loading-bar'
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
-export default class App extends Component {
-  size =9
+const App =()=> {
+  const size =9
   // state = {
   //   progress:0
   // }
-  setProgress= (progress)=>{
-    this.setState({progress:progress})
-  }
-  render() {
+  const [progress,setProgress] =useState(0)
+  
+  
     return (
       <div>
         {/* <LoadingBar
@@ -29,7 +28,7 @@ export default class App extends Component {
         
       /> */}
         <NavBar />
-        <News  size ={this.size} country ="in" category='science' />
+        <News  size ={size} country ="in" category='science' />
         {/* <Router>
         
         
@@ -43,5 +42,5 @@ export default class App extends Component {
       </div>
     )
   }
-}
 
+export default App
