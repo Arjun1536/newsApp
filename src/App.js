@@ -1,6 +1,5 @@
 
 import './App.css';
-
 import  { useState} from 'react'
 import NavBar from './components/NavBar';
 import News from './components/News';
@@ -13,7 +12,7 @@ import LoadingBar from 'react-top-loading-bar'
 
 
 const App =()=> {
-  const size =9
+  const size =4
   // state = {
   //   progress:0
   // }
@@ -22,12 +21,8 @@ const App =()=> {
   
     return (
       <div>
-        {/* <LoadingBar
-        color='#f11946'
-        progress= {this.state.progress}
-        
-      /> */}
-        <NavBar />
+       
+        <NavBar/>
         <News  size ={size} country ="in" category='science' />
         {/* <Router>
         
